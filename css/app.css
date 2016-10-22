@@ -1,0 +1,184 @@
+@font-face {
+    font-family: 'iconfont';
+    src: url('//at.alicdn.com/t/font_1477128510_8083107.eot'); /* IE9*/
+    src: url('//at.alicdn.com/t/font_1477128510_8083107.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('//at.alicdn.com/t/font_1477128510_8083107.woff') format('woff'), /* chrome、firefox */
+    url('//at.alicdn.com/t/font_1477128510_8083107.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('//at.alicdn.com/t/font_1477128510_8083107.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont{
+    font-size: 64px;
+    font-family:"iconfont";
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.container-fluid{
+    padding: 0;
+}
+.main-body-wrapper{
+    position: relative;
+    height: 100vh;
+}
+.main-body-wrapper .bg-main{
+    background-image: url("../img/bg.jpeg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    z-index: 2;
+}
+.main-body{
+    height: 100%;
+    /*background: -webkit-linear-gradient(#77C6DC, #E0797D); !* Safari 5.1 - 6.0 *!*/
+    /*background: -o-linear-gradient(#77C6DC, #E0797D); !* Opera 11.1 - 12.0 *!*/
+    /*background: -moz-linear-gradient(#77C6DC, #E0797D); !* Firefox 3.6 - 15 *!*/
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(rgba(119,198,220,0.9), rgba(224,121,125,0.9)); /* 标准的语法（必须放在最后） */
+}
+.nav{
+    padding: 20px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: all .25s ease-in;
+}
+.nav-down{
+    background-color: #fff;
+    border-bottom: 1px solid #5e5e5e;
+    z-index: 10;
+    opacity: 1;
+}
+.nav-down a{
+    color: #5e5e5e;
+}
+.nav .web-id-a{
+    display: block;
+    height: 35px;
+    line-height: 35px;
+    margin: 0px 20px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.nav-member{
+    height: 25px;
+    margin: 5px 0;
+    line-height: 25px;
+}
+.nav-member .nav-a{
+    color: #fff;
+    margin-left: 20px;
+}
+.introduce-container{
+    position: relative;
+    top: 24%;
+}
+.introduce-container .content{
+    text-align: center;
+    margin: 0 auto;
+    color: #fff;
+}
+.content .tit-content{
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: 1em 0 0.5em;
+}
+.content h1{
+    font-weight: 400;
+    font-size: 3.6em;
+    text-shadow: -2px 2px 0px rgba(0,0,0,0.3),-2px 4px 2px rgba(0,0,0,0.1);
+
+}
+/*.content .logo{*/
+    /*background: url("../img/logo_large_white.png") no-repeat -30px center;*/
+    /*background-size: cover;*/
+    /*width: 300px;*/
+    /*height: 229px;*/
+    /*margin: 0 auto;*/
+    /*z-index: -1;*/
+/*}*/
+.content i{
+    font-size: 24px;
+}
+.content span:before,.content span:after{
+    display: block;
+    width: 40%;
+    content: "";
+    margin-top: 10px;
+    border: 1px solid #fff;
+}
+.content span:before,.down-line:before{
+    float: left;
+}
+.content span:after,.down-line:after{
+    float: right;
+}
+.content .footer-content{
+    margin: 20px auto;
+    max-width: 20em;
+}
+.join-button{
+    margin-top: 20px;
+}
+.join-button a{
+    display: block;
+    font-size: 18px;
+    color: #888888;
+    opacity: .9;
+    width: 200px;
+    height: 46px;
+    margin: 0 auto;
+    background-color: #F1F1F1;
+    border: 1px solid #ebebeb;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 46px;
+    transition: all .25s ease-in;
+}
+.join-button a:hover{
+    text-decoration: none;
+    background-color: #ffffff;
+}
+.whatWeDo{
+    text-align: center;
+    background-color: #F5F5F5;
+    padding: 30px 0;
+}
+.whatWeDo .down-line-container{
+    max-width: 20em;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.down-line-container .down-line:before,.down-line:after{
+    display: block;
+    width: 40%;
+    content: "";
+    margin-top: 10px;
+    border: 1px solid #5e5e5e;
+}
+.services-group{
+    margin-top: 20px;
+}
+.service-item{
+    background-color: #fff;
+    margin: 0 10px;
+}
+.service-item .android{
+    color: #68CD72;
+}
+.service-item .php{
+    color: #6C7FB5;
+}
+.service-item .html{
+    color: #F06120;
+}
+.service-item .java{
+    color: #0F6EB6;
+}
