@@ -1,16 +1,6 @@
-@font-face {
-    font-family: 'iconfont';
-    src: url('//at.alicdn.com/t/font_1477128510_8083107.eot'); /* IE9*/
-    src: url('//at.alicdn.com/t/font_1477128510_8083107.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('//at.alicdn.com/t/font_1477128510_8083107.woff') format('woff'), /* chrome、firefox */
-    url('//at.alicdn.com/t/font_1477128510_8083107.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-    url('//at.alicdn.com/t/font_1477128510_8083107.svg#iconfont') format('svg'); /* iOS 4.1- */
-}
 
-.iconfont{
-    font-size: 64px;
-    font-family:"iconfont";
-}
+
+/******************************Common-part************************/
 *{
     margin: 0;
     padding: 0;
@@ -18,27 +8,31 @@
 .container-fluid{
     padding: 0;
 }
-.main-body-wrapper{
-    position: relative;
-    height: 100vh;
-}
-.main-body-wrapper .bg-main{
-    background-image: url("../img/bg.jpeg");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
-    z-index: 2;
-}
 .main-body{
     height: 100%;
-    /*background: -webkit-linear-gradient(#77C6DC, #E0797D); !* Safari 5.1 - 6.0 *!*/
-    /*background: -o-linear-gradient(#77C6DC, #E0797D); !* Opera 11.1 - 12.0 *!*/
-    /*background: -moz-linear-gradient(#77C6DC, #E0797D); !* Firefox 3.6 - 15 *!*/
     position: absolute;
     top: 0;
     width: 100%;
+
+}
+/******************************Common-part************************/
+
+
+
+.main-body-wrapper{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bg-main{
+    background-image: url("../img/bg.jpeg");
+    height: 100vh;
+}
+.main-body-firstScreen{
+    background: -webkit-linear-gradient(rgba(119,198,220,0.9), rgba(224,121,125,0.9)); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(rgba(119,198,220,0.9), rgba(224,121,125,0.9)); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(rgba(119,198,220,0.9), rgba(224,121,125,0.9)); /* Firefox 3.6 - 15 */
     background: linear-gradient(rgba(119,198,220,0.9), rgba(224,121,125,0.9)); /* 标准的语法（必须放在最后） */
 }
 .nav{
@@ -67,15 +61,19 @@
     font-size: 30px;
     font-weight: bolder;
 }
+.nav .web-id-a:hover{
+    text-decoration: none;
+}
 .nav-member{
     height: 25px;
-    margin: 5px 0;
     line-height: 25px;
 }
 .nav-member .nav-a{
     color: #fff;
     margin-left: 20px;
+    padding: 5px 3px;
 }
+
 .introduce-container{
     position: relative;
     top: 24%;
@@ -84,6 +82,9 @@
     text-align: center;
     margin: 0 auto;
     color: #fff;
+}
+.introduce-container .diamond{
+    font-size: 24px;
 }
 .content .tit-content{
     letter-spacing: 0.1em;
@@ -104,26 +105,10 @@
     /*margin: 0 auto;*/
     /*z-index: -1;*/
 /*}*/
-.content i{
-    font-size: 24px;
-}
-.content span:before,.content span:after{
-    display: block;
-    width: 40%;
-    content: "";
-    margin-top: 10px;
-    border: 1px solid #fff;
-}
-.content span:before,.down-line:before{
-    float: left;
-}
-.content span:after,.down-line:after{
-    float: right;
-}
-.content .footer-content{
-    margin: 20px auto;
-    max-width: 20em;
-}
+
+
+
+
 .join-button{
     margin-top: 20px;
 }
@@ -151,24 +136,18 @@
     background-color: #F5F5F5;
     padding: 30px 0;
 }
-.whatWeDo .down-line-container{
-    max-width: 20em;
-    margin: 0 auto;
-    margin-bottom: 20px;
-}
-.down-line-container .down-line:before,.down-line:after{
-    display: block;
-    width: 40%;
-    content: "";
-    margin-top: 10px;
-    border: 1px solid #5e5e5e;
-}
+
 .services-group{
     margin-top: 20px;
 }
 .service-item{
     background-color: #fff;
     margin: 0 10px;
+    cursor: pointer;
+    transition: all .5s ease-in;
+}
+.service-item:hover{
+    transform: rotateY(360deg);
 }
 .service-item .android{
     color: #68CD72;
@@ -181,4 +160,113 @@
 }
 .service-item .java{
     color: #0F6EB6;
+}
+.footer-introduce{
+    max-width: 60em;!important;
+    margin-top: 20px;
+}
+.footer-introduce p{
+    line-height: 1.5;
+}
+.footer-introduce .introduce{
+    line-height: 1.5;
+}
+.whoWeAre{
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    color: #ffffff;
+    height: auto;
+}
+.whoWeAre h1{
+    margin-top: 17vh;
+}
+.main-body-whoWeAre{
+    background: rgba(0,0,0,0.6);
+}
+.bg-whoWeAre{
+    background-image: url("../img/bg_part1.jpeg");
+    height: 100vh;
+}
+.member-block{
+    width: 70%;
+    margin: 0 auto;
+}
+.whoWeAre .member-block .member-item{
+    margin: 20px auto;
+    background-color: #fff;
+    color: #0f0f0f;
+    border: 1px solid #ebebeb;
+    border-radius: 5px;
+    padding: 20px 10px;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75);
+    transition: all .15s ease-in;
+}
+.member-item:hover{
+    transform: scale(1.03);
+}
+.whoWeAre .member-block .member-item .member-item-avatar img{
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border: 2px solid salmon;
+    border-radius: 50%;
+}
+.whoWeAre .member-introduce-container{
+    color: #777777;
+    font-size: 12px;
+    padding: 0 30px;
+    line-height: 1.5;
+}
+.member-introduce-container .member-position{
+    font-size: 14px;
+}
+.member-introduce-container .member-name{
+    color: #0f0f0f;
+}
+.projects{
+    text-align: center;
+    margin-top: 17vh;
+    margin-bottom: 17vh;
+}
+.projects .tit-small{
+    color: #777777;
+}
+.projects-container{
+    width: 70%;
+}
+.projects-container img{
+    width: 400px;
+    height: 250px;
+}
+.joinUs{
+    position: relative;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+
+}
+.joinUs .bg-join{
+    background-image: url("../img/bg-part2.jpeg");
+    height: 100vh;
+}
+.main-body-join{
+    background-color: rgba(0,0,0,0.6);
+}
+.main-body-join h1{
+    margin-top: 17vh;
+}
+.footer{
+    overflow: hidden;
+    height: 50px;
+    background-color: #0f0f0f;
+    color: #fff;
+    line-height: 50px;
+}
+.footer .footer-left a{
+    color: #777777;
 }

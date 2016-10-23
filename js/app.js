@@ -8,14 +8,20 @@
     var navId = $(".web-id-a");
     var nvaA = $(".nav-a");
     var mainBodyWrapper = $(".main-body-wrapper .bg-main");
+    var whoWeAre = $(".whoWeAre");
+    var whoWeAreOffsetTop = whoWeAre.offset().top;
+    var whoWeAreBg = $(".bg-whoWeAre");
+    var joinUs = $(".joinUs");
+    var joinUsOffsetTop = joinUs.offset().top;
+    var joinUsBg = $(".bg-join");
+
 
     $(window).scroll(function () {
         scrollTop = $(document).scrollTop();
         //首屏图片滚动事件
         if(scrollTop > 0){
             mainBodyWrapper.css({
-                "background-image":"url(../img/bg.jpeg)",
-                "transform":"translate3d(0px,"+ scrollTop+"px" +"0px"
+                "transform":"translate3d(0px,"+ (scrollTop*.3)+"px" +",0px)"
             });
         }
         //导航栏事件
@@ -33,6 +39,16 @@
                 navId.css("color","#fff");
                 nvaA.css("color","#fff");
             }
+        }
+        //whoWeAre背景滚动事件
+        if(scrollTop + windowHeight > whoWeAreOffsetTop || scrollTop < whoWeAreOffsetTop)
+        {
+            whoWeAreBg.css("transform","translate3d(0px,"+ (scrollTop - whoWeAreOffsetTop)*0.3 +"px,0px)");
+        }
+
+        //joinUs背景滚动事件
+        if(scrollTop + windowHeight > joinUsOffsetTop || scrollTop > joinUsOffsetTop){
+            joinUsBg.css("transform","translate3d(0px,"+ (scrollTop - joinUsOffsetTop)*0.3 +"px,0px)");
         }
     });
 

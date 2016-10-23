@@ -1,0 +1,50 @@
+/******************************Ali-icon-part************************/
+@font-face {
+    font-family: 'iconfont';
+    src: url('//at.alicdn.com/t/font_1477128510_8083107.eot'); /* IE9*/
+    src: url('//at.alicdn.com/t/font_1477128510_8083107.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('//at.alicdn.com/t/font_1477128510_8083107.woff') format('woff'), /* chrome、firefox */
+    url('//at.alicdn.com/t/font_1477128510_8083107.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('//at.alicdn.com/t/font_1477128510_8083107.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont{
+    font-size: 64px;
+    font-family:"iconfont";
+}
+/******************************Ali-icon-part************************/
+
+/******************************Background-scroll-part************************/
+.bg-scroll-container{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    z-index: 2;
+
+}
+/******************************Background-scroll-part************************/
+
+/******************************down-line-part************************/
+.down-line-container{
+    max-width: 20em;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.down-line:before,.down-line:after{
+    display: block;
+    width: 40%;
+    content: "";
+    margin-top: 10px;
+    border: 1px solid #fff;
+}
+.down-line:before{
+    float: left;
+}
+.down-line:after{
+    float: right;
+}
+.down-line-dark:before,.down-line-dark:after{
+    border-color: #5e5e5e;
+}
+/******************************down-line-part************************/
