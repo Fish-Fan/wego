@@ -7,10 +7,13 @@
     var nav = $(".nav");
     var navId = $(".web-id-a");
     var nvaA = $(".nav-a");
-    var mainBodyWrapper = $(".main-body-wrapper .bg-main");
+    //fisrtScreen
+    var mainBg = $(".bg-main");
+    //whoWeAre
     var whoWeAre = $(".whoWeAre");
     var whoWeAreOffsetTop = whoWeAre.offset().top;
     var whoWeAreBg = $(".bg-whoWeAre");
+    //joinUs
     var joinUs = $(".joinUs");
     var joinUsOffsetTop = joinUs.offset().top;
     var joinUsBg = $(".bg-join");
@@ -20,7 +23,7 @@
         scrollTop = $(document).scrollTop();
         //首屏图片滚动事件
         if(scrollTop > 0){
-            mainBodyWrapper.css({
+            mainBg.css({
                 "transform":"translate3d(0px,"+ (scrollTop*.3)+"px" +",0px)"
             });
         }
@@ -41,13 +44,13 @@
             }
         }
         //whoWeAre背景滚动事件
-        if(scrollTop + windowHeight > whoWeAreOffsetTop || scrollTop < whoWeAreOffsetTop)
+        if(scrollTop + windowHeight > whoWeAreOffsetTop)
         {
             whoWeAreBg.css("transform","translate3d(0px,"+ (scrollTop - whoWeAreOffsetTop)*0.3 +"px,0px)");
         }
 
         //joinUs背景滚动事件
-        if(scrollTop + windowHeight > joinUsOffsetTop || scrollTop > joinUsOffsetTop){
+        if(scrollTop + windowHeight > joinUsOffsetTop){
             joinUsBg.css("transform","translate3d(0px,"+ (scrollTop - joinUsOffsetTop)*0.3 +"px,0px)");
         }
     });
